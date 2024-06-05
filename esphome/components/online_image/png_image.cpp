@@ -4,6 +4,7 @@
 #include "esphome/components/display/display_buffer.h"
 #include "esphome/core/application.h"
 #include "esphome/core/helpers.h"
+#include "esphome/core/log.h"
 
 #ifdef ONLINE_IMAGE_PNG_SUPPORT
 

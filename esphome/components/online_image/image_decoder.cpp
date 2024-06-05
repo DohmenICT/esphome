@@ -2,6 +2,7 @@
 
 #include "image_decoder.h"
 #include "online_image.h"
+#include "esphome/core/log.h"
 
 namespace esphome {
 namespace online_image {
