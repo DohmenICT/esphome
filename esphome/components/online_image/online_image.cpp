@@ -24,8 +24,6 @@ static const char *const TAG = "online_image";
 #include "png_image.h"
 #endif
 
-#include <WiFiClient.h>
-
 namespace esphome {
 namespace online_image {
 
@@ -356,7 +354,8 @@ void OnlineImage::update() {
     ESP_LOGI(TAG, "Updating image");
   }
 
-  int begin_status = http_.begin( url_);
+  WiFiClient client; 
+  int begin_status = http_.begin( client , url_);
   if (!begin_status) {
     ESP_LOGE(TAG, "Could not download image from %s. Connection failed: %i", url_, begin_status);
     return;
