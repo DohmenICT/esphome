@@ -354,7 +354,7 @@ void OnlineImage::update() {
     ESP_LOGI(TAG, "Updating image");
   }
 
-  WiFiClient *client = http_.getStreamPtr();
+  WiFiClient client = http_.getClient();
   int begin_status = http_.begin( client , url_);
   if (!begin_status) {
     ESP_LOGE(TAG, "Could not download image from %s. Connection failed: %i", url_, begin_status);
